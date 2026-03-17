@@ -9,7 +9,7 @@
 This repo documents the data infrastructure and BI design behind ShipMonk's B2B wholesale operations scoreboard — a weekly reporting system used by ops directors and site leads to manage fulfillment performance across a multi-node warehouse network.
 
 **The system answers four core operational questions, every week:**
-1. Are orders shipping on time? *(OTRS — On-Time Release to Ship)*
+1. Are orders shipping on time? *(OTRS — On-Time Ready to Ship)*
 2. Are orders shipping in full? *(OTS — On-Time & In-Full Shipment)*
 3. Is pick accuracy holding? *(Pick Audit)*
 4. Is pack accuracy holding? *(Pack Audit)*
@@ -37,8 +37,8 @@ Ops Meeting Automation (Python)
 
 ## Key Metrics Defined
 
-### OTRS — On-Time Release to Ship
-Measures whether wholesale orders were released to the warehouse for picking within the SLA window.
+### OTRS — On-Time Ready to Ship
+Measures whether wholesale orders were released by the warehouse within the SLA window.
 
 - **Denominator**: All wholesale orders due for release in the week
 - **Numerator**: Orders released on or before the SLA date
@@ -109,12 +109,12 @@ The system covers the following ShipMonk warehouse sites:
 
 | Region | Sites |
 |---|---|
-| West | Nevada, Nevada 2, Nevada 3, California, California 2 |
-| East | Pennsylvania, Pennsylvania 2, New Jersey, New York |
-| South | Texas, Texas Bonded, Florida, Florida 2 |
-| Central | Kentucky, Kentucky 2, Kentucky Bonded |
-| Canada | Toronto, Toronto 8 |
-| International | Czechia, Mexico, Mexico 3, United Kingdom |
+| West | Nevada, California, California 2 |
+| East | Pennsylvania, New Jersey, New York |
+| South | Texas,  Florida |
+| Central | Kentucky |
+| Canada | Toronto |
+| International | Czechia, Mexico, United Kingdom |
 
 ---
 
