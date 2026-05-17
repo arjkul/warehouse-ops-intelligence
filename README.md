@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repo documents the data infrastructure and BI design behind ShipMonk's B2B wholesale operations scoreboard — a weekly reporting system used by ops directors and site leads to manage fulfillment performance across a multi-node warehouse network.
+This repo documents the data infrastructure and BI design behind B2B wholesale operations scoreboard — a weekly reporting system used by ops directors and site leads to manage fulfillment performance across a multi-node warehouse network.
 
 **The system answers four core operational questions, every week:**
 1. Are orders shipping on time? *(OTRS — On-Time Ready to Ship)*
@@ -100,21 +100,6 @@ WHERE
     AND DATEDIFF('day', order_date, CURRENT_DATE) > 0
 ORDER BY days_aged DESC
 ```
-
----
-
-## Warehouse Network Coverage
-
-The system covers the following ShipMonk warehouse sites:
-
-| Region | Sites |
-|---|---|
-| West | Nevada, California, California 2 |
-| East | Pennsylvania, New Jersey, New York |
-| South | Texas,  Florida |
-| Central | Kentucky |
-| Canada | Toronto |
-| International | Czechia, Mexico, United Kingdom |
 
 ---
 
